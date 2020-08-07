@@ -58,7 +58,6 @@ class Portfolio extends React.Component {
           autoPlay
           items={images}
         />
-        ;
       </>
     );
   }
