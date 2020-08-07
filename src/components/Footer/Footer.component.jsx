@@ -12,7 +12,10 @@ class Footer extends React.Component {
           columns={[
             {
               icon: (
-                <img src="https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg" />
+                <img
+                  src="https://gw.alipayobjects.com/zos/rmsportal/XuVpGqBFxXplzvLjJBZB.svg"
+                  alt="icono de periquito"
+                />
               ),
               title: "Redes Sociales",
               openExternal: true,
