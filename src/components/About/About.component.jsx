@@ -6,31 +6,17 @@ const About = () => {
     <>
       <Jumbotron fluid>
         <Container>
-          <h1 id="About">About</h1>
+          <br />
+          <h1>About Me</h1>
           <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
+            I'm a rising artist. I draw things for fun and also for work. Also
+            an avid gamer and series watcher.
           </p>
           <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
+            I like to give my art a Fantasy Feeling, so It may take you on a
+            ride to other worlds.
           </p>
-          <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
-          </p>
-          <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
-          </p>
-          <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
-          </p>
-          <p>
-            This is a modified jumbotron that occupies the entire horizontal
-            space of its parent.
-          </p>
+          <p>😁Enjoy my content😁</p>
         </Container>
       </Jumbotron>
     </>
