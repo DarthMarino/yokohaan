@@ -1,5 +1,21 @@
+body {
+  padding-top: 50px;
+}
 .profile {
   border-radius: 50%;
   width: 100px;
   height: 100px;
+}
+.card {
+  margin-left: 2vh;
+  margin-right: 2vh;
+}
+.card-body {
+  font-size: 2vw;
+}
+
+.about-bg {
+  background-image: url("../../assets/background.jpg");
+  background-clip: unset;
+  background-size: 100%;
 }

@@ -1,28 +1,29 @@
 import React from "react";
-import { Jumbotron, Container } from "react-bootstrap";
-import profile from "./../../assets/profile.png";
+import { MDBCard, MDBCardBody } from "mdb-react-ui-kit";
+import profile from "./../../assets/profile.jpg";
+import Socials from "../Socials/Socials.component";
 import "./About.css";
 
 const About = () => {
   return (
     <>
-      <Jumbotron fluid>
-        <Container>
-          <br />
-          <img src={profile} alt="My homemade art" className="profile" />
-          <br />
-          <h1>About Me</h1>
-          <p>
-            I'm a rising artist. I draw things for fun and also for work. Also
-            an avid gamer and series watcher.
-          </p>
-          <p>
-            I like to give my art a Fantasy Feeling, so It may take you on a
-            ride to other worlds.
-          </p>
-          <p>Enjoy my content</p>
-        </Container>
-      </Jumbotron>
+      <header>
+        <div className="p-5 text-center about-bg">
+          <img src={profile} alt="My self drawing" className="mb-3 profile" />
+
+          <MDBCard className="card">
+            <MDBCardBody>
+              <h4 className="mb-3 card-body">
+                I'm a rising artist. I draw things for fun and also for work.
+                Also an avid gamer and series watcher. I like to give my art a
+                Fantasy Feeling, so It may take you on a ride to other worlds.
+                Enjoy my content
+              </h4>
+            </MDBCardBody>
+          </MDBCard>
+          <Socials />
+        </div>
+      </header>
     </>
   );
 };
