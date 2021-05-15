@@ -1,15 +1,35 @@
-.carousel {
-  align-self: center;
-  margin-left: 4vh;
-  margin-right: 4vh;
-  margin: 0 auto;
-  height: 40%;
-  width: 60%;
-}
-.portfolio {
-  content: center;
-}
 .header {
   padding-top: 20px;
   padding-bottom: 20px;
+}
+.navigation-wrapper {
+  position: relative;
+  max-height: 600px;
+}
+.image {
+  max-height: 600px;
+}
+
+.arrow {
+  width: 30px;
+  height: 30px;
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  -webkit-transform: translateY(-50%);
+  fill: "rgba(124,240,10,0.5)";
+  cursor: pointer;
+}
+
+.arrow--left {
+  left: 5px;
+}
+
+.arrow--right {
+  left: auto;
+  right: 5px;
+}
+
+.arrow--disabled {
+  fill: rgba(255, 255, 255, 0.5);
 }

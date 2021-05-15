@@ -1,4 +1,46 @@
-.socials {
-  padding-top: 30px;
-  backface-visibility: hidden;
+h2 {
+  font-size: 3vw;
+}
+.component {
+  display: grid;
+  grid-template-columns: 30% 70%;
+}
+.title {
+  grid-column-start: 1;
+  grid-column-end: 2;
+  margin: auto;
+}
+.social-container {
+  margin: auto;
+  grid-column-start: 2;
+  grid-column-end: 3;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.social {
+  margin-right: 3vh;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  height: auto;
+  width: 15vw;
+  text-align: center;
+  background-color: #f1f1f1;
+}
+
+.icon-container .icon {
+  margin: auto;
+  font-size: 5vw;
+  max-height: 85px;
+  max-width: 85px;
+}
+
+.twitter {
+  color: #00acee;
+}
+.instagram {
+  color: #bc1888;
+}
+.kofi {
+  color: rgb(255, 81, 0);
 }

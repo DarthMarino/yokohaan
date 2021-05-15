@@ -1,41 +1,56 @@
 import React from "react";
-import { MDBIcon } from "mdb-react-ui-kit";
+
+import { Icon, InlineIcon } from "@iconify/react";
+import koFi from "@iconify-icons/simple-icons/ko-fi";
+import instagramFilled from "@iconify-icons/ant-design/instagram-filled";
+import twitterOutlined from "@iconify-icons/ant-design/twitter-outlined";
+
 import "./Socials.css";
+
+const IconLocale = (props) => {
+  return (
+    <div className="icon-container">
+      <a href={props.href} target="_blank" rel="noreferrer noopener">
+        <Icon className={`icon ${props.color}`} icon={props.icon} />
+      </a>
+    </div>
+  );
+};
 
 const Socials = () => {
   return (
     <>
-      <header>
-        <div className="p-5 text-center socials">
-          <a
-            href="https://www.instagram.com/yokohaan_art/"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <MDBIcon size="4x">
-              <i className="fab fa-instagram" />
-            </MDBIcon>
-          </a>{" "}
-          <a
-            href="https://ko-fi.com/yokohaan"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <MDBIcon size="4x">
-              <i className="fas fa-coffee"></i>
-            </MDBIcon>
-          </a>{" "}
-          <a
-            href="https://twitter.com/YokoHaanTsu"
-            target="_blank"
-            rel="noreferrer noopener"
-          >
-            <MDBIcon size="4x">
-              <i className="fab fa-twitter"></i>
-            </MDBIcon>
-          </a>{" "}
+      <div className="component">
+        <div className="title">
+          <h1>My Socials</h1>
         </div>
-      </header>
+        <div className="p-5 text-center social-container ">
+          <div className="social">
+            <IconLocale
+              icon={koFi}
+              color="kofi"
+              href="https://ko-fi.com/yokohaan"
+            />
+            <h2>Ko-fi</h2>
+          </div>
+          <div className="social">
+            <IconLocale
+              icon={instagramFilled}
+              color="instagram"
+              href="https://www.instagram.com/yokohaan_art/"
+            />
+            <h2>Instagram</h2>
+          </div>
+          <div className="social">
+            <IconLocale
+              icon={twitterOutlined}
+              color="twitter"
+              href="https://twitter.com/YokoHaanTsu"
+            />
+            <h2>Twitter</h2>
+          </div>
+        </div>
+      </div>
     </>
   );
 };

@@ -1,56 +1,88 @@
 import React from "react";
-import {
-  MDBCarousel,
-  MDBCarouselInner,
-  MDBCarouselItem,
-  MDBCarouselElement,
-} from "mdb-react-ui-kit";
+import { useKeenSlider } from "keen-slider/react";
+import "keen-slider/keen-slider.min.css";
 import "./Portfolio.css";
-import image0 from "./../../assets/image7.png";
+
 import image1 from "./../../assets/image1.jpeg";
 import image2 from "./../../assets/image2.jpeg";
 import image3 from "./../../assets/image3.jpeg";
 import image4 from "./../../assets/image4.jpg";
 import image5 from "./../../assets/image5.png";
-import image6 from "./../../assets/image6.png";
 
-class Portfolio extends React.Component {
-  render() {
-    return (
-      <>
-        <h1 className="header" id="Portfolio">
-          Some of my art
-        </h1>
-        <div className="carousel portfolio">
-          <MDBCarousel showIndicators interval={500}>
-            <MDBCarouselInner>
-              <MDBCarouselItem itemId={0}>
-                <MDBCarouselElement src={image0} alt="..." />
-              </MDBCarouselItem>
-              <MDBCarouselItem itemId={1}>
-                <MDBCarouselElement src={image1} alt="..." />
-              </MDBCarouselItem>
-              <MDBCarouselItem itemId={2}>
-                <MDBCarouselElement src={image2} alt="..." />
-              </MDBCarouselItem>
-              <MDBCarouselItem itemId={3}>
-                <MDBCarouselElement src={image3} alt="..." />
-              </MDBCarouselItem>
-              <MDBCarouselItem itemId={4}>
-                <MDBCarouselElement src={image4} alt="..." />
-              </MDBCarouselItem>
-              <MDBCarouselItem itemId={5}>
-                <MDBCarouselElement src={image5} alt="..." />
-              </MDBCarouselItem>
-              <MDBCarouselItem itemId={6}>
-                <MDBCarouselElement src={image6} alt="..." />
-              </MDBCarouselItem>
-            </MDBCarouselInner>
-          </MDBCarousel>
+const Portfolio = () => {
+  const [currentSlide, setCurrentSlide] = React.useState(0);
+  const [sliderRef, slider] = useKeenSlider({
+    initial: 0,
+    slideChanged(s) {
+      setCurrentSlide(s.details().relativeSlide);
+    },
+  });
+  return (
+    <>
+      <h1 className="header" id="Portfolio">
+        Some of my art
+      </h1>
+      <div className="navigation-wrapper">
+        <div ref={sliderRef} className="keen-slider">
+          <div className="keen-slider__slide number-slide1">
+            <img src={image1} className="img-fluid shadow-4 image" alt="..." />
+          </div>
+          <div className="keen-slider__slide number-slide2">
+            <img src={image2} className="img-fluid shadow-4 image" alt="..." />
+          </div>
+          <div className="keen-slider__slide number-slide3">
+            <img src={image3} className="img-fluid shadow-4 image" alt="..." />
+          </div>
+          <div className="keen-slider__slide number-slide4">
+            <img src={image4} className="img-fluid shadow-4 image" alt="..." />
+          </div>
+          <div className="keen-slider__slide number-slide5">
+            <img src={image5} className="img-fluid shadow-4 image" alt="..." />
+          </div>
         </div>
-      </>
-    );
-  }
-}
+        {slider && (
+          <>
+            <ArrowLeft
+              onClick={(e) => e.stopPropagation() || slider.prev()}
+              disabled={currentSlide === 0}
+            />
+            <ArrowRight
+              onClick={(e) => e.stopPropagation() || slider.next()}
+              disabled={currentSlide === slider.details().size - 1}
+            />
+          </>
+        )}
+      </div>
+    </>
+  );
+};
+
+const ArrowLeft = (props) => {
+  const disabeld = props.disabled ? " arrow--disabled" : "";
+  return (
+    <svg
+      onClick={props.onClick}
+      className={"arrow arrow--left" + disabeld}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path d="M16.67 0l2.83 2.829-9.339 9.175 9.339 9.167-2.83 2.829-12.17-11.996z" />
+    </svg>
+  );
+};
+
+const ArrowRight = (props) => {
+  const disabeld = props.disabled ? " arrow--disabled" : "";
+  return (
+    <svg
+      onClick={props.onClick}
+      className={"arrow arrow--right" + disabeld}
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 24 24"
+    >
+      <path d="M5 3l3.057-3 11.943 12-11.943 12-3.057-3 9-9z" />
+    </svg>
+  );
+};
 
 export default Portfolio;
