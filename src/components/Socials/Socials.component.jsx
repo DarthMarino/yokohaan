@@ -1,6 +1,6 @@
 import React from "react";
 
-import { Icon, InlineIcon } from "@iconify/react";
+import { Icon } from "@iconify/react";
 import koFi from "@iconify-icons/simple-icons/ko-fi";
 import instagramFilled from "@iconify-icons/ant-design/instagram-filled";
 import twitterOutlined from "@iconify-icons/ant-design/twitter-outlined";
