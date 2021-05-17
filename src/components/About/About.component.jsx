@@ -7,7 +7,13 @@ const About = () => {
   return (
     <>
       <div className="p-5 text-center about-bg">
-        <img src={profile} alt="My self drawing" className="mb-3 profile" />
+        <img
+          src={profile}
+          width="150vw"
+          height="150vw"
+          alt="My self drawing"
+          className="mb-3 profile"
+        />
 
         <MDBCard>
           <MDBCardBody>

@@ -10,9 +10,7 @@ import "./Socials.css";
 const IconLocale = (props) => {
   return (
     <div className="icon-container">
-      <a href={props.href} target="_blank" rel="noreferrer noopener">
-        <Icon className={`icon ${props.color}`} icon={props.icon} />
-      </a>
+      <Icon className={`icon ${props.color}`} icon={props.icon} />
     </div>
   );
 };
@@ -25,30 +23,38 @@ const Socials = () => {
           <h1>My Socials</h1>
         </div>
         <div className="p-5 text-center social-container ">
-          <div className="social">
-            <IconLocale
-              icon={koFi}
-              color="kofi"
+          <div className=".hvr-grow">
+            <a
               href="https://ko-fi.com/yokohaan"
-            />
-            <h2>Ko-fi</h2>
+              target="_blank"
+              rel="noreferrer noopener"
+            >
+              <div className="social">
+                <IconLocale icon={koFi} color="kofi" />
+                <h2>Ko-fi</h2>
+              </div>
+            </a>
           </div>
-          <div className="social">
-            <IconLocale
-              icon={instagramFilled}
-              color="instagram"
-              href="https://www.instagram.com/yokohaan_art/"
-            />
-            <h2>Instagram</h2>
-          </div>
-          <div className="social">
-            <IconLocale
-              icon={twitterOutlined}
-              color="twitter"
-              href="https://twitter.com/YokoHaanTsu"
-            />
-            <h2>Twitter</h2>
-          </div>
+          <a
+            href="https://twitter.com/YokoHaanTsu"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div className="social">
+              <IconLocale icon={twitterOutlined} color="twitter" />
+              <h2>Twitter</h2>
+            </div>
+          </a>
+          <a
+            href="https://www.instagram.com/yokohaan_art/"
+            target="_blank"
+            rel="noreferrer noopener"
+          >
+            <div className="social">
+              <IconLocale icon={instagramFilled} color="instagram" />
+              <h2>Instagram</h2>
+            </div>
+          </a>
         </div>
       </div>
     </>

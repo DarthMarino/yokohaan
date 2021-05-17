@@ -19,9 +19,7 @@ const Portfolio = () => {
   });
   return (
     <>
-      <h1 className="header" id="Portfolio">
-        Some of my art
-      </h1>
+      <h1>Some of my art</h1>
       <div className="navigation-wrapper">
         <div ref={sliderRef} className="keen-slider">
           <div className="keen-slider__slide number-slide1">
