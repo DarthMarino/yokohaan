@@ -1,0 +1,26 @@
+h2 {
+  font-size: 3vw;
+}
+a {
+  color: black;
+  background-color: transparent;
+  text-decoration: none;
+}
+a:hover {
+  color: black;
+}
+
+.component {
+  display: grid;
+  height: 500px;
+  grid-template-columns: 50% 50%;
+}
+.title {
+  grid-column-start: 2;
+  grid-column-end: 3;
+  margin: auto;
+}
+.tablet {
+  grid-column-start: 1;
+  grid-column-end: 2;
+}
