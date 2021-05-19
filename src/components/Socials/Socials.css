@@ -10,11 +10,11 @@ a:hover {
   color: black;
 }
 
-.component {
+.social-component {
   display: grid;
   grid-template-columns: 30% 70%;
 }
-.title {
+.left-title {
   grid-column-start: 1;
   grid-column-end: 2;
   margin: auto;

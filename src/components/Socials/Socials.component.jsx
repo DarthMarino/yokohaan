@@ -18,8 +18,8 @@ const IconLocale = (props) => {
 const Socials = () => {
   return (
     <>
-      <div className="component">
-        <div className="title">
+      <div className="social-component">
+        <div className="left-title">
           <h1>My Socials</h1>
         </div>
         <div className="p-5 text-center social-container ">

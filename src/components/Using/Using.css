@@ -10,12 +10,12 @@ a:hover {
   color: black;
 }
 
-.component {
+.model-component {
   display: grid;
   height: 500px;
-  grid-template-columns: 50% 50%;
+  grid-template-columns: 60% 40%;
 }
-.title {
+.right-title {
   grid-column-start: 2;
   grid-column-end: 3;
   margin: auto;
