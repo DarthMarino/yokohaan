@@ -3,7 +3,7 @@ import React, { useRef, Suspense } from "react";
 import { Canvas, useFrame, useLoader } from "@react-three/fiber";
 import { GLTFLoader } from "three/examples/jsm/loaders/GLTFLoader";
 import "./Using.css";
-import { Euler, Quaternion } from "three";
+import { Euler } from "three";
 
 const Tablet = () => {
   const gltf = useLoader(GLTFLoader, "models/tablet.glb");
