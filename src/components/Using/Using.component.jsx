@@ -8,8 +8,7 @@ import { Euler } from "three";
 const Tablet = () => {
   const gltf = useLoader(GLTFLoader, "models/tablet.glb");
   const nodes = gltf.nodes;
-  const materials = gltf.materials;
-  const globalPosition = [-12, -12, 0];
+  const globalPosition = [-15, -12, -5];
   const globalAxis = new Euler(0, 600, 0, "XYZ");
   const group = useRef();
 
@@ -19,12 +18,12 @@ const Tablet = () => {
   });
   return (
     <>
-      <group scale={0.5} ref={group} dispose={null}>
+      <group ref={group} dispose={null}>
         <mesh
           castShadow
           receiveShadow
           geometry={nodes.mesh_0.geometry}
-          material={materials["custom5(Clone)"]}
+          material={nodes.mesh_0.material}
           position={globalPosition}
           rotation={globalAxis}
         />
@@ -32,7 +31,7 @@ const Tablet = () => {
           castShadow
           receiveShadow
           geometry={nodes.mesh_0_1.geometry}
-          material={materials["custom2(Clone)"]}
+          material={nodes.mesh_0_1.material}
           position={globalPosition}
           rotation={globalAxis}
         />
@@ -40,7 +39,7 @@ const Tablet = () => {
           castShadow
           receiveShadow
           geometry={nodes.mesh_0_2.geometry}
-          material={materials["_defaultMat(Clone)"]}
+          material={nodes.mesh_0_2.material}
           position={globalPosition}
           rotation={globalAxis}
         />
@@ -48,7 +47,7 @@ const Tablet = () => {
           castShadow
           receiveShadow
           geometry={nodes.mesh_0_3.geometry}
-          material={materials["custom4(Clone)"]}
+          material={nodes.mesh_0_3.material}
           position={globalPosition}
           rotation={globalAxis}
         />
@@ -56,7 +55,7 @@ const Tablet = () => {
           castShadow
           receiveShadow
           geometry={nodes.mesh_0_4.geometry}
-          material={materials["custom3(Clone)"]}
+          material={nodes.mesh_0_4.material}
           position={globalPosition}
           rotation={globalAxis}
         />
