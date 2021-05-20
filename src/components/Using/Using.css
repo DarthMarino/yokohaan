@@ -13,7 +13,11 @@ a:hover {
 .model-component {
   display: grid;
   height: 500px;
+
   grid-template-columns: 60% 40%;
+}
+.tablet-canvas {
+  width: 100%;
 }
 .right-title {
   grid-column-start: 2;
