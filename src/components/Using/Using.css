@@ -12,8 +12,8 @@ a:hover {
 
 .model-component {
   display: grid;
+  grid-template-rows: auto;
   height: 500px;
-
   grid-template-columns: 60% 40%;
 }
 .tablet-canvas {
@@ -25,6 +25,29 @@ a:hover {
   margin: auto;
 }
 .tablet {
+  grid-row-start: 1;
   grid-column-start: 1;
   grid-column-end: 2;
+}
+
+@media only screen and (max-width: 768px) {
+  /* For mobile phones: */
+  .model-component {
+    display: grid;
+    height: 500px;
+    grid-template-columns: 5% auto 5%;
+  }
+  .right-title {
+    position: absolute;
+    left: 0;
+    right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
+  .tablet {
+    grid-column-start: 2;
+    grid-column-end: 3;
+  }
 }

@@ -1,6 +1,5 @@
 import React from "react";
 import { MDBCard, MDBCardBody } from "mdb-react-ui-kit";
-import profile from "./../../assets/profile.jpg";
 import "./About.css";
 
 const About = () => {
@@ -8,7 +7,7 @@ const About = () => {
     <>
       <div className="p-5 text-center about-bg">
         <img
-          src={profile}
+          src={"/assets/profile.jpg"}
           width="150vw"
           height="150vw"
           alt="My self drawing"

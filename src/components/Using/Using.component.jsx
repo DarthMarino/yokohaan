@@ -33,7 +33,7 @@ const Tablet = () => {
 
   return (
     <>
-      <group ref={group} dispose={null}>
+      <group ref={group} dispose={null} scale={0.0007 * window.innerWidth}>
         <mesh
           castShadow
           receiveShadow
@@ -83,6 +83,9 @@ const Using = () => {
   return (
     <>
       <div className="model-component">
+        <div className="right-title">
+          <h1>What Im Using</h1>
+        </div>
         <div className="tablet">
           <Canvas
             camera={{
@@ -96,9 +99,6 @@ const Using = () => {
               <Tablet />
             </Suspense>
           </Canvas>
-        </div>
-        <div className="right-title">
-          <h1>What Im Using</h1>
         </div>
       </div>
     </>
